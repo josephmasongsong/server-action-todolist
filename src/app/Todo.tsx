@@ -48,7 +48,7 @@ export default function Todo({ todo }: { todo: Todo }) {
     startTransition(() => deleteTodo(todo.id));
   };
 
-  const handleSaveOnKeyDown = e => {
+  const handleSaveOnKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.keyCode === 13) {
       handleSave();
     }

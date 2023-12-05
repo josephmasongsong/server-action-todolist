@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { addTodo } from '../lib/actions';
 
 export default function Form() {
-  const ref = useRef();
+  const ref = useRef<HTMLFormElement | null>(null);
   return (
     <form
       action={async formData => {

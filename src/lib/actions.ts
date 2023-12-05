@@ -3,7 +3,7 @@ import { revalidatePath } from 'next/cache';
 import prisma from './prisma';
 
 export async function addTodo(formData: FormData) {
-  const title = formData.get('title');
+  const title = formData.get('title') as string;
 
   try {
     await prisma.todo.create({ data: { title } });
